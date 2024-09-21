@@ -1,0 +1,5 @@
+<lightningmessagechannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>filterChannel</masterLabel>
+    <isExposed>true</isExposed>
+    <description>This is a filterChannel Message Channel.</description>
+</lightningmessagechannel>

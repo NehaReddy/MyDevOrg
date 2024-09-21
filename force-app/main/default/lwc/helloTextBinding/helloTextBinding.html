@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Hello Binding Text for Reactivity">
+
+        <div>Hello ,{greeting}</div>
+        <lightning-input label="Name" value={greeting} onchange={handleChange}></lightning-input>
+
+        <lightning-input
+        type="search"
+        onchange={handleKeyChange}
+        class="slds-var-m-bottom_small"
+        label="Search"
+        value={searchKey}
+        ></lightning-input>
+
+        <template lwc:if={contacts.data}>
+            <template for:each={contacts.data} for:item="contact">
+                <p key={contact.Id}>{contact.Name}</p>
+            </template>
+        </template>
+    </lightning-card>
+   
+</template>

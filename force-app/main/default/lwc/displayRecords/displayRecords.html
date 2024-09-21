@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="LMS Subscriber Component" icon-name="custom:custom36">
+
+        <div class="slds-m-around_medium">
+            <template lwc:if={contacts}>
+                <template for:each={contacts} for:item="contact">
+                    <p key={contact.Id}>{contact.Name}</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+
+</template>

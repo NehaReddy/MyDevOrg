@@ -1,0 +1,20 @@
+<apex:page controller="displayQAs" docType="html-5.0">
+  
+   <apex:form >
+       <apex:pageBlock >
+           <apex:pageBlockTable value="{!quesList }" var="objQ">
+           <apex:column headerValue="SerialNumber">
+                    <apex:outputField value="{!objQ.Serial_No__c}"/>
+               </apex:column>
+            <apex:column headerValue="Name">
+                    <apex:outputField value="{!objQ.Question__c}"/>
+                     <apex:pageBlockTable value="{!objQ.Responces__r}" var="c">
+                        <apex:InputText value="{!c.Answer__c}"/>
+                    </apex:pageBlockTable>
+               </apex:column>
+               </apex:pageBlockTable>
+               <apex:commandButton value="Save" action="{!save}"/>
+        </apex:pageBlock>
+   </apex:form>
+   
+</apex:page>

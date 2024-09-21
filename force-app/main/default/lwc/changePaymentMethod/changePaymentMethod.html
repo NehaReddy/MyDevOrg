@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Payment Confirmation" icon-name="custom:custom17">
+    <template lwc:if={ccmessageValue}>
+        <div class="slds-m-around_medium slds-box slds-var-p-around_medium">
+            <p><b>CC got verified on: Date</b></p>
+        </div>
+    </template>
+    <template lwc:if={achmessageValue}>
+        <div class="slds-m-around_medium slds-box slds-var-p-around_medium">
+            <p><b>ACH got verified on: Date</b></p>
+        </div>
+    </template>
+    <div>
+        <lightning-button  variant="brand-outline" label="Change Payment Method" title="Payment" onclick={handleChangePaymentMethod} class="slds-m-left_x-small"></lightning-button>
+    </div> 
+    </lightning-card>
+</template>
