@@ -4,7 +4,11 @@ public class acc_Ctrl{
 
     }
 
-
+ //create a sum method  
+ public integer sum(integer a,integer b){
+ return a+b;
+ }
+ 
  public boolean showPopup {get;set;}
  
      public void doSave(){
